@@ -5,22 +5,34 @@ class ListNode(object):
 
 class Solution(object):
     def mergeTwoLists(self, list1, list2):
-        head = list1
         if not list1 and not list2:
             return None
-        current = list2
-        while list2.next:
-            if current.val <= list1.val:
-                current = list2.next
-                list2.next = list1.next
-                list1.next = list2
-            else:
-                list1 = list1.next
+        if not list1:
+            return list2
+        if not list2:
+            return list1
+        
+        resultHead = ListNode()
+        result = resultHead
+        
+        while list1 or list2:
+            if not list1:
+                result.next = list2
+                break
+            elif not list2:
+                result.next = list1
+                break
+            elif list2.val <= list1.val:
+                result.next = list2
                 list2 = list2.next
-                current = current.next
-        return head
-                        
-            
+            elif list1.val <= list2.val:
+                result.next = list1
+                list1 = list1.next
+            result = result.next
+        return resultHead.next
+    
+    # result = list1 or list2
+    # if list1 or list2 is empty, just connect the result.next to remainder list.
 
 def main():
     sol = Solution()
