@@ -10,7 +10,7 @@ def findLongestPrefix(strs):
     return prefix
 
 def main():
-    strs = ["dog","racecar","car"]
+    strs = ["dance","dag","danger","damage"]
     print(findLongestPrefix(strs))
 
 if __name__=="__main__":
