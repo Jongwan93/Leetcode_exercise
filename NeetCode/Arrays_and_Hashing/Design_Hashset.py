@@ -1,15 +1,14 @@
 class MyHashSet:
-
     def __init__(self):
-        self.my_set = set()
+        self.list = [False] * 1000001
 
-    def add(self, int):
-        self.my_set.add(int)
+    def add(self, key):
+        self.list[key] = True
+        return
 
-    def remove(self, int):
-        self.my_set.remove(int)
+    def remove(self, key):
+        self.list[key] = False
+        return
 
-    def contains(self, int):
-        if int in self.my_set:
-            return True
-        return False
+    def contains(self, key):
+        return self.list[key]
