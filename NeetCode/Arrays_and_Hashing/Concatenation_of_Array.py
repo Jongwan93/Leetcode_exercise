@@ -12,3 +12,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# https://neetcode.io/problems/concatenation-of-array?list=neetcode250

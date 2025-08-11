@@ -1,6 +1,6 @@
 class Solution:
     def isPalindrome(self, s):
-        trim_s = ''.join(c.lower() for c in s if c.isalnum())
+        trim_s = ''.join(c.lower() for c in s if c.isalnum()) # seq[start:stop:step]
         # trim_s = ""
         # for c in s:
         #     if c.isalunum():
@@ -11,24 +11,22 @@ class Solution:
     # - uses built in python library
     # - interviewer might want you to do it yourself
 
-    
-    # Another solution but very inefficient
+    # - isalnum is useful!
     # def isPalindrome(self, s):
-    #     l, r = 0, len(s)-1
-    #     while l < r:
-    #         while l < r and not self.alphaNum(s[l]):
-    #             l += 1
-    #         while r > l and not self.alphaNum(s[r]):
-    #             r -= 1
-    #         if s[l].lower() != s[r].lower():
-    #             return False
-    #         l, r = l+1, r-1
-    #     return True     
-    #
-    # def alphaNum(self, c):
-    #     return (ord('A') <= ord(c) <= ord('Z') or 
-    #             ord('a') <= ord(c) <= ord('z') or
-    #             ord('0') <= ord(c) <= ord('9'))            
+    # l, r = 0, len(s) - 1
+    # isalnum = str.isalnum
+    # lower = str.lower
+
+    # while l < r:
+    #     while l < r and not isalnum(s[l]):
+    #         l += 1
+    #     while l < r and not isalnum(s[r]):
+    #         r -= 1
+    #     if lower(s[l]) != lower(s[r]):
+    #         return False
+    #     l += 1
+    #     r -= 1
+    # return True      
 
 def main():
     sol = Solution()
@@ -37,3 +35,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# https://neetcode.io/problems/is-palindrome?list=neetcode250

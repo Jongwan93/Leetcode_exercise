@@ -27,3 +27,6 @@ if __name__=="__main__":
 # don't spend more than 5 minutes to think about the solution.
 # - even if its a brute force solution.
 # - explain the improved solution
+
+
+# https://neetcode.io/problems/longest-common-prefix?list=neetcode250

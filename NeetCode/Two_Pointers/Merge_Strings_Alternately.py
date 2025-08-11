@@ -18,6 +18,10 @@ class Solution:
         #     result += word1[index1:]
         
         # return result
+
+        # <<TRAP>>
+        # Consider the remainder after going through both alphabets.
+        # one might be lnoger then other which leaves a remainder.
     
         result = []
         for a, b in zip_longest(word1, word2, fillvalue=''):
@@ -41,3 +45,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# https://neetcode.io/problems/merge-strings-alternately?list=neetcode250
