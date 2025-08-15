@@ -5,7 +5,7 @@ class Solution:
             if c == "+":
                 stack.append(stack[-1] + stack[-2])
             elif c == "D":
-                stack.append(2 * stack[-1])
+                stack.append(stack[-1] * 2)
             elif c == "C":
                 stack.pop()
             else:
@@ -15,7 +15,7 @@ class Solution:
 def main():
     sol = Solution()
     ops = ["1","2","+","C","5","D"]
-    print(sol.Solution(ops))
+    print(sol.calPoints(ops))
 
 if __name__ == "__main__":
     main()
