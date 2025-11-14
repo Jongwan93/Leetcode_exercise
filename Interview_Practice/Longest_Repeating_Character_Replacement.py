@@ -17,7 +17,7 @@ class Solution(object):
 
         l = 0
         dict = {}
-        maxLength = 0
+        maxLength = 0 
 
         # dict[s[r]] = dict.get(s[r], 0) + 1
         for r in range(len(s)):
